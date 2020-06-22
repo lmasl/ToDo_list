@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 const todoControl = document.querySelector('.todo-control'),
   headerInput = document.querySelector('.header-input'),
@@ -64,8 +64,8 @@ const setStorage = () => {
 };
 
 const getStorage = () => {
-  todoData = JSON.parse(localStorage.getItem('arrTodo'));
-};
+    todoData = JSON.parse(localStorage.getItem('arrTodo')) || [];
+  };
 
 window.onbeforeunload = () => {
   setStorage();
